@@ -1,4 +1,6 @@
 ## User Manager API
+This is a REST API built using Djnago and Django Rest Framework. 
+It has a database which hold user and a user_child information table. You can view, create, update, delete user and user_child. A user_child can not exist without a parent(user).
 
 ## Installation Instruction
 You need python and pip installed on your system. 

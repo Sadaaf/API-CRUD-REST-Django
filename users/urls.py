@@ -19,7 +19,8 @@ from users import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('users/', views.user_list),
+    #Custom URLs
+    path('users/', views.user_list),    
     path('users/<int:id>',views.user_detail),
     path('users-child/',views.user_child_list),
     path('users-child/<int:id>',views.user_child_detail),

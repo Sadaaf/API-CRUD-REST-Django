@@ -5,7 +5,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 
-
+# Deals with the GET and POST requests of USER_Information
 @api_view(['GET', 'POST'])
 def user_list(request):
 
@@ -22,7 +22,7 @@ def user_list(request):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
 
-
+# Deals with the GET and POST requests of USER_CHILD_Information
 @api_view(['GET', 'POST'])
 def user_child_list(request):
 
@@ -40,6 +40,8 @@ def user_child_list(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+#Deals with the GET, PUT, DELETE requests of USER_Information
+#Returns, Delete or Update a specific user information depending on the ID contained inside the request
 @api_view(['GET', 'PUT', 'DELETE'])
 def user_detail(request, id):
     try:
@@ -59,7 +61,8 @@ def user_detail(request, id):
         user.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-
+#Deals with the GET, PUT, DELETE requests of USER_CHILD_Information
+#Returns, Delete or Update a specific user_child information depending on the ID contained inside the request
 @api_view(['GET', 'PUT', 'DELETE'])
 def user_child_detail(request, id):
     try:

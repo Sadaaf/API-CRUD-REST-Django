@@ -17,10 +17,24 @@ This will start the development server at http://127.0.0.1:8000/
 ![GET REQUEST USERS](https://user-images.githubusercontent.com/35129264/173423648-cc18c4e4-634b-4b3e-97d7-786261b71334.png)
 You can get all the existing users in the database using http://127.0.0.1:8000/users/
 
+![GET REQUEST USERS INSIDE THE BROWSER](https://user-images.githubusercontent.com/35129264/173650044-bf8f690a-250e-4f97-8809-d4f6dc0a179d.png)
+User Data inside the browser
 ________________________________________________________________
 
 ![GET REQUEST USERS_CHILD](https://user-images.githubusercontent.com/35129264/173423995-6e92b0cd-dfb2-4951-96a2-71f5a3416813.png)
 You can get all the existing child under all parents using http://127.0.0.1:8000/users-child/
+
+![GET REQUEST USERS_CHILD INSIDE THE BROWSER](https://user-images.githubusercontent.com/35129264/173652021-97e19617-3def-4f95-afbb-325e054edd1b.png)
+User_child Data inside the browser
+
+You can also get an specific user or user_child data using their ID
+![image](https://user-images.githubusercontent.com/35129264/173656421-8ce1628c-ea34-4c0b-99dc-7cc9c6f9cbc8.png)
+http://127.0.0.1:8000/users/{ID}    Replace ID with a valid ID to get a specific user
+
+![image](https://user-images.githubusercontent.com/35129264/173653643-020b7201-523a-4882-9ffa-160cf68df0ab.png)
+http://127.0.0.1:8000/users-child/{ID}  Replace ID with a valid ID to get a specific user_child
+
+Data Can be updated through these webpages as well by putting a valid json data inside the content field
 
 - POST
 ![POST REQUEST USERS](https://user-images.githubusercontent.com/35129264/173424423-bd314093-a6cb-44dc-aacb-d8793abebfb6.png)
@@ -75,3 +89,7 @@ ________________________________________________________________
 
 ![DELETE REQUEST USER](https://user-images.githubusercontent.com/35129264/173427384-9877e8b9-dd7f-4768-97ab-2c84cb921621.png)
 You can delete any user_child information from the database using http://127.0.0.1:8000/users-child/{id} [specify the id number of the user_child you want to Delete in {id}], and send a DELETE Request
+
+## Admin Panel
+Alternatively you can use this admin panel to interact with the database directly. Visit this link to access the admin panel http://127.0.0.1:8000/admin/
+![Admin Panel](https://user-images.githubusercontent.com/35129264/173641663-8edbf521-5b47-4089-899c-61c3735ac7ab.png)
